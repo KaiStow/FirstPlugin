@@ -1,0 +1,23 @@
+name: start
+version: '1.0-SNAPSHOT'
+main: org.plugins.start.firstPlugin
+api-version: '1.21'
+commands:
+  fly:
+    description: Toggles flight for the player
+    usage: /fly [player]
+    aliases: f
+    permissions:
+      start.commands.fly.self:
+        description: Toggle your own flight
+        default: true
+      start.commands.fly.others:
+        description: Toggle another player's flight
+        default: op
+    permission-message: no permission
+  gv:
+    description: Give a chosen item to a player
+    usage: /gv <player> <item> [amount]
+    aliases: g
+    permission: start.commands.give
+    permission-message: no permission
